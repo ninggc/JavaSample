@@ -1,4 +1,4 @@
-package com.ninggc.thinking_in_java;
+package com.ninggc.demo.thinking_in_java;
 
 import org.junit.After;
 import org.junit.Assert;

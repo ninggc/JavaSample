@@ -1,4 +1,4 @@
-import com.ninggc.toos.IGson;
+import com.ninggc.tools.interfaces.IGson;
 
 public class Test implements IGson {
     public static void main(String[] args) {

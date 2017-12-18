@@ -1,4 +1,4 @@
-package com.ninggc.toos;
+package com.ninggc.tools.interfaces;
 
 import com.google.gson.Gson;
 
