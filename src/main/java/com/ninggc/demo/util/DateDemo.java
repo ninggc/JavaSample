@@ -57,5 +57,14 @@ public class DateDemo implements IGson {
         System.out.println("24h：" + calendar.get(Calendar.HOUR_OF_DAY));
         System.out.println(calendar.getTime().getTime());
         System.out.println(calendar.getTimeInMillis());
+        try {
+            Calendar calendar1 = calendar.getClass().newInstance();
+            System.out.println(calendar1);
+            System.out.println(calendar1.getTimeInMillis());
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
     }
 }
