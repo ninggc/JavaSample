@@ -62,8 +62,18 @@ public class FileDemo implements IGson {
     }
 
     private static TreeInfo reCurseDirs(File dir) {
+        if (dir == null) {
+            return null;
+        }
+
+        File[] files = dir.listFiles();
+        if (files == null) {
+            return null;
+        }
+
         TreeInfo result = new TreeInfo();
-        for (File item : dir.listFiles()) {
+
+        for (File item : files) {
             if (item.isDirectory()) {
                 result.dirs.add(item);
                 result.addAll(reCurseDirs(item));

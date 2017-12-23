@@ -16,13 +16,8 @@ public class ThreadDemo {
                 5,
                 1000,
                 TimeUnit.MINUTES,
-                new ArrayBlockingQueue<Runnable>(5));
-        Callback callback = new Callback() {
-            @Override
-            public void onResult(String msg) {
-                System.out.println("onResult id is " + msg + message);
-            }
-        };
+                new ArrayBlockingQueue<>(5));
+        Callback callback = msg -> System.out.println("onResult id is " + msg + message);
         threadPoolExecutor.execute(new MyRunnableBuilder().setCallback(callback).createMyRunnable());
         threadPoolExecutor.execute(new MyRunnableBuilder().setCallback(callback).createMyRunnable());
         threadPoolExecutor.execute(new MyRunnableBuilder().setCallback(callback).createMyRunnable());
